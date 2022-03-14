@@ -46,3 +46,10 @@ UserSettings/Layouts/default-2021.dwlt
 *.log
 *.dwlt
 Assets/UniversalRenderPipelineGlobalSettings.asset
+Assets/UniversalRenderPipelineGlobalSettings.asset
+Logs/AssetImportWorker0.log
+Logs/AssetImportWorker1.log
+Logs/shadercompiler-AssetImportWorker0.log
+Logs/shadercompiler-UnityShaderCompiler.exe0.log
+UserSettings/EditorUserSettings.asset
+UserSettings/Layouts/default-2021.dwlt
