@@ -1,4 +1,3 @@
-    using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerCamera : MonoBehaviour
@@ -28,6 +27,6 @@ public class PlayerCamera : MonoBehaviour
         yRot = Mathf.Clamp(yRot, -80, 80);
         
         cam.transform.localRotation = Quaternion.Euler(yRot, 0, 0 );
-        transform.localRotation = quaternion.Euler(0, xRot, 0);
+        transform.localRotation = Quaternion.Euler(0, xRot, 0);
     }
 }
