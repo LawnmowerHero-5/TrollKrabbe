@@ -15,7 +15,7 @@ public class Input : MonoBehaviour
     public bool run { get; private set; }
     private void Update() {
         jumpTrigger = Keyboard.current.spaceKey.wasPressedThisFrame;
-        run = Keyboard.current.shiftKey.isPressed;
+        //run = Keyboard.current.shiftKey.isPressed;
     }
 
     

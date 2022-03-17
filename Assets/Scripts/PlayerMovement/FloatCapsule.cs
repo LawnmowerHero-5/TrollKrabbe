@@ -19,14 +19,14 @@ public class FloatCapsule : MonoBehaviour
     private float springForce;
     
     [Header("Jump")]
-    public bool buffer = false;
-    [SerializeField] private float bufferTime = 0.2f;
-    private  float bufferTimer;
-    [SerializeField] private float jumpForce = 200f;
+    //public bool buffer = false;
+    //[SerializeField] private float bufferTime = 0.2f;
+    //private  float bufferTimer;
+    //[SerializeField] private float jumpForce = 200f;
 
-    [SerializeField] private float jumpDelay = 0.3f;
-    private  float jumpTimer;
-    public bool jumpAble = true;
+    //[SerializeField] private float jumpDelay = 0.3f;
+    //private  float jumpTimer;
+    //public bool jumpAble = true;
     
     [Header("Ground Check")]
     public bool grounded = true;
@@ -105,7 +105,7 @@ public class FloatCapsule : MonoBehaviour
     }
     public void Jump(bool jumpValue)
     {
-        if (jumpValue && coyoteTime && jumpAble | buffer && coyoteTime && jumpAble)
+        /*if (jumpValue && coyoteTime && jumpAble | buffer && coyoteTime && jumpAble)
         {
             
             
@@ -129,6 +129,6 @@ public class FloatCapsule : MonoBehaviour
         if (Time.timeSinceLevelLoad >= jumpTimer)
         {
             jumpAble = true;
-        }
+        }*/
     }
 }
