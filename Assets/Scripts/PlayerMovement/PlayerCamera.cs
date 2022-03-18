@@ -1,32 +1,34 @@
 using UnityEngine;
-
-public class PlayerCamera : MonoBehaviour
+namespace PlayerMovement
 {
-    [SerializeField] private Vector2 mouseSensitivity = new Vector2(0.5f, 5f);
+    public class PlayerCamera : MonoBehaviour
+    {
+        [SerializeField] private Vector2 mouseSensitivity = new Vector2(0.5f, 5f);
 
-    private Camera cam;
+        private Camera cam;
 
-    private float multiplier = 0.01f;
+        private float multiplier = 0.01f;
 
-    private float xRot;
-    private float yRot;
+        private float xRot;
+        private float yRot;
     
-    private void Awake() {
-        cam = GetComponentInChildren<Camera>();
-    }
-    private void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
-    public void Look(Vector2 input)
-    {
-        xRot += input.x * mouseSensitivity.x * multiplier;
+        private void Awake() {
+            cam = GetComponentInChildren<Camera>();
+        }
+        private void Start()
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        public void Look(Vector2 input)
+        {
+            xRot += input.x * mouseSensitivity.x * multiplier;
 
-        yRot -= input.y * mouseSensitivity.y * multiplier;
-        yRot = Mathf.Clamp(yRot, -80, 80);
+            yRot -= input.y * mouseSensitivity.y * multiplier;
+            yRot = Mathf.Clamp(yRot, -80, 80);
         
-        cam.transform.localRotation = Quaternion.Euler(yRot, 0, 0 );
-        transform.localRotation = Quaternion.Euler(0, xRot, 0);
+            cam.transform.localRotation = Quaternion.Euler(yRot, 0, 0 );
+            transform.localRotation = Quaternion.Euler(0, xRot, 0);
+        }
     }
 }
