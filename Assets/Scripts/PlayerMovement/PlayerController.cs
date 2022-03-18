@@ -11,7 +11,7 @@ namespace PlayerMovement
         private PlayerCamera m_Camera;
         private FloatCapsule m_FloatCapsule;
 
-        private SceneManager sceneManager;
+        public SceneManager sceneManager;
 
         private void Awake()
         {
@@ -24,6 +24,7 @@ namespace PlayerMovement
         {
             //Sets all rotations to 0
             transform.rotation = Quaternion.Euler(0,transform.rotation.y,0);
+            sceneManager = new SceneManager();
         }
         private void Update()
         {
