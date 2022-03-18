@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     private PlayerCamera m_Camera;
     private FloatCapsule m_FloatCapsule;
 
+    private SceneManager sceneManager;
+
     private void Awake()
     {
         m_FloatCapsule = GetComponent<FloatCapsule>();
@@ -24,7 +26,10 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
-        m_Camera.Look(m_Input.lookVector);
+        if (!sceneManager.gameIsPaused)
+        {
+            m_Camera.Look(m_Input.lookVector);
+        }
         m_FloatCapsule.Jump(m_Input.jumpTrigger);
     }
     private void FixedUpdate() {    
