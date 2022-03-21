@@ -28,7 +28,7 @@ namespace PlayerMovement
         }
         private void Update()
         {
-            if (!sceneManager.gameIsPaused)
+            if (sceneManager.gameIsPaused)
             {
                 m_Camera.Look(m_Input.lookVector);
             }
