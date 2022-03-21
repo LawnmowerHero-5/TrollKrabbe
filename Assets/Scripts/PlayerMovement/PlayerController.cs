@@ -24,11 +24,10 @@ namespace PlayerMovement
         {
             //Sets all rotations to 0
             transform.rotation = Quaternion.Euler(0,transform.rotation.y,0);
-            //sceneManager = new SceneManager();
         }
         private void Update()
         {
-            if (sceneManager.gameIsPaused)
+            if (!sceneManager.gameIsPaused)
             {
                 m_Camera.Look(m_Input.lookVector);
             }
