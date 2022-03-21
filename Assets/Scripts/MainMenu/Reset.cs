@@ -26,6 +26,7 @@ namespace MainMenu
         }
         private void ResetPlayer()
         {
+            //todo: set in pause
             rb.constraints = RigidbodyConstraints.FreezePosition;
             player.transform.position = MainMenuLookPoint.position;
             player.transform.rotation = MainMenuLookPoint.rotation;

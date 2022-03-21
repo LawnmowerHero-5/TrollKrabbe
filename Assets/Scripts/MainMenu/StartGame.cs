@@ -16,6 +16,7 @@ namespace MainMenu
         }
         public void StartTheGame()
         {
+            //todo: unpause
             SetPlayerPosition();
             mainMenu.SetActive(false);
             //Put what you want to be called when the start button is pressed here
