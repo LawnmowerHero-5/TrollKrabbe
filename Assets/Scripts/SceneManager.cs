@@ -6,7 +6,7 @@ public class SceneManager : MonoBehaviour
 {
     public GameObject pauseCanvas;
     private InputActions inputAction;
-    private bool pause;
+    private bool gamePause;
     public bool gameIsPaused;
 
     private void Awake()
@@ -16,9 +16,9 @@ public class SceneManager : MonoBehaviour
 
     private void Update()
     {
-        pause = inputAction.Player.Pause.triggered;
+        gamePause = inputAction.Player.Pause.triggered;
 
-        if (pause)
+        if (gamePause)
         {
             if (gameIsPaused)
             {
@@ -36,6 +36,7 @@ public class SceneManager : MonoBehaviour
         pauseCanvas.SetActive(true);
         Time.timeScale = 0f;
         gameIsPaused = true;
+        AudioListener.pause = true;
     }
 
     public void Resume()
@@ -44,6 +45,7 @@ public class SceneManager : MonoBehaviour
         gameIsPaused = false;
         if (pauseCanvas == null) return;
         pauseCanvas.SetActive(false);
+        AudioListener.pause = false;
     }
 
     private void OnEnable()
