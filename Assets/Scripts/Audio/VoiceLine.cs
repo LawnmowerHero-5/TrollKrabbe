@@ -4,7 +4,6 @@ using UnityEngine;
 public class VoiceLine : ScriptableObject
 {
     [SerializeField] private AudioClip line;
-    [SerializeField] private VoiceLine nextLine;
 
     public void PlayLine(AudioSource audioSource)
     {
