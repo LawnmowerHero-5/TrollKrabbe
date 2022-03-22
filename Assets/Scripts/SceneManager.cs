@@ -13,6 +13,7 @@ public class SceneManager : MonoBehaviour
     public GameObject mainMenu;
     public GameObject menuCamera;
     private StartGame startGame;
+    private Reset reset;
 
     private void Awake()
     {
@@ -109,5 +110,12 @@ public class SceneManager : MonoBehaviour
         menuCamera.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;             
         Cursor.visible = false;
+    }
+
+    public void ResetGame()
+    {
+        Resume();
+        AudioListener.pause = true;
+        MainMenu();
     }
 }

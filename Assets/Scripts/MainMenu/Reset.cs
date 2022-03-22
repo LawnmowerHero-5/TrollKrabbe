@@ -24,7 +24,7 @@ namespace MainMenu
             ResetLoop();
         }
         
-        private void ResetPlayer()
+        public void ResetPlayer()
         {
             sceneManager.PauseInMenu();
             player.transform.position = MainMenuLookPoint.position;
