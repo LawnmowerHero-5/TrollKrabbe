@@ -4,11 +4,11 @@ public class VoiceLineController : MonoBehaviour
 {
     [SerializeField] private VoiceLine[] voiceLines;
 
-    private static int _voiceLineIndex;
+    public int voiceLineIndex;
 
     public void PlayNextVoiceLine(AudioSource audioSource)
     {
-        voiceLines[_voiceLineIndex].PlayLine(audioSource);
-        _voiceLineIndex++;
+        voiceLines[voiceLineIndex].PlayLine(audioSource);
+        voiceLineIndex++;
     }
 }
