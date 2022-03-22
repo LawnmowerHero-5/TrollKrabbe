@@ -71,7 +71,7 @@ namespace PlayerMovement
                 Vector3 rayDir = transform.TransformDirection(-transform.up);
             
                 float rayDirVel = Vector3.Dot(rayDir, vel);
-                //if (!grounded) return;
+                if (!grounded) return;
             
                 float x = hit.distance - rideHeight;
 
