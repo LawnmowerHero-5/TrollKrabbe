@@ -1,7 +1,7 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
+
 namespace PlayerMovement
+
 {
     public class PlayerCamera : MonoBehaviour
     {

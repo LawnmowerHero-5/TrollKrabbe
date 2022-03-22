@@ -1,5 +1,5 @@
-
 using UnityEngine;
+
 namespace MainMenu
 {
     public class Reset : MonoBehaviour
@@ -10,15 +10,12 @@ namespace MainMenu
         [SerializeField] private LoopCounter.LoopCounter m_LoopCounter;
        
         private SceneManager sceneManager;
-
-        //private Rigidbody rb;
+        
         private void Awake()
         {
             player=GameObject.FindGameObjectWithTag("Player");
-            //rb = player.GetComponent<Rigidbody>();
-            
-
         }
+        
         public void StartGame()
         {
             sceneManager.PauseInMenu();
@@ -26,11 +23,10 @@ namespace MainMenu
             ResetPlayer();
             ResetLoop();
         }
+        
         private void ResetPlayer()
         {
-            //todo: set in pause
             sceneManager.PauseInMenu();
-            //rb.constraints = RigidbodyConstraints.FreezePosition;
             player.transform.position = MainMenuLookPoint.position;
             player.transform.rotation = MainMenuLookPoint.rotation;
             Cursor.lockState = CursorLockMode.Confined;             

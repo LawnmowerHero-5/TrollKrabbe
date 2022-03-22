@@ -1,8 +1,6 @@
-using System;
 using MainMenu;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SceneManager : MonoBehaviour
 {
@@ -29,10 +27,10 @@ public class SceneManager : MonoBehaviour
     
     private void Update()
     {
-        
-
         gamePause = inputAction.Player.Pause.triggered;
+        
         if (startMenu == true) return;
+        
         if (gamePause)
         {
             if (gameIsPaused)
