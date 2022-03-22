@@ -9,13 +9,11 @@ namespace PlayerMovement
         private Input m_Input;
         private Movement m_Movement;
         private PlayerCamera m_Camera;
-        private FloatCapsule m_FloatCapsule;
 
         public SceneManager sceneManager;
 
         private void Awake()
         {
-            m_FloatCapsule = GetComponent<FloatCapsule>();
             m_Camera = GetComponent<PlayerCamera>();
             m_Movement = GetComponent<Movement>();
             m_Input = GetComponent<Input>();
@@ -27,12 +25,10 @@ namespace PlayerMovement
         }
         private void Update()
         {
-            if (!sceneManager.gameIsPaused)
-            {
-                m_Camera.Look(m_Input.lookVector);
-            }
-            m_FloatCapsule.Jump(m_Input.jumpTrigger);
+            if (sceneManager.gameIsPaused) return;
+            m_Camera.Look(m_Input.lookVector);
         }
+        
         private void FixedUpdate() {    
             m_Movement.Move(m_Input.moveDirection, m_Input.run);
         }
