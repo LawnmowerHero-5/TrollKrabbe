@@ -9,17 +9,19 @@ namespace MainMenu
         [SerializeField] private Transform MainMenuLookPoint;
         [SerializeField] private LoopCounter.LoopCounter m_LoopCounter;
        
+        private SceneManager sceneManager;
 
-        private Rigidbody rb;
+        //private Rigidbody rb;
         private void Awake()
         {
             player=GameObject.FindGameObjectWithTag("Player");
-            rb = player.GetComponent<Rigidbody>();
+            //rb = player.GetComponent<Rigidbody>();
             
 
         }
-        void Start()
+        public void StartGame()
         {
+            sceneManager.PauseInMenu();
             mainMenu.SetActive(true);
             ResetPlayer();
             ResetLoop();
@@ -27,11 +29,12 @@ namespace MainMenu
         private void ResetPlayer()
         {
             //todo: set in pause
-            rb.constraints = RigidbodyConstraints.FreezePosition;
+            sceneManager.PauseInMenu();
+            //rb.constraints = RigidbodyConstraints.FreezePosition;
             player.transform.position = MainMenuLookPoint.position;
             player.transform.rotation = MainMenuLookPoint.rotation;
-
-           
+            Cursor.lockState = CursorLockMode.Confined;             
+            Cursor.visible = true;
         }
 
         private void ResetLoop()

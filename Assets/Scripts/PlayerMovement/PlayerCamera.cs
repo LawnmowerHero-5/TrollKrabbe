@@ -1,3 +1,5 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 namespace PlayerMovement
 {
@@ -6,6 +8,7 @@ namespace PlayerMovement
         [SerializeField] private Vector2 mouseSensitivity = new Vector2(0.5f, 5f);
 
         private Camera cam;
+        private SceneManager sceneManager;
 
         private float multiplier = 0.01f;
 
@@ -20,6 +23,7 @@ namespace PlayerMovement
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
+
         public void Look(Vector2 input)
         {
             xRot += input.x * mouseSensitivity.x * multiplier;

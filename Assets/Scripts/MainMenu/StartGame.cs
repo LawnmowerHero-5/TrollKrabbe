@@ -4,30 +4,35 @@ namespace MainMenu
     public class StartGame : MonoBehaviour
     {
         public Transform startPosition;
-        private GameObject player;
+        public GameObject player;
         
-        private Rigidbody rb;
+        //private Rigidbody rb;
+
+        private SceneManager sceneManager;
+        
         [SerializeField]private GameObject mainMenu;
         private void Awake()
         {
             player = GameObject.FindGameObjectWithTag("Player");
-            rb = player.GetComponent<Rigidbody>();
+            //rb = player.GetComponent<Rigidbody>();
            
         }
         public void StartTheGame()
         {
-            //todo: unpause
             SetPlayerPosition();
             mainMenu.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;       
+            Cursor.visible = false;
             //Put what you want to be called when the start button is pressed here
         }
+        
         private void SetPlayerPosition()
         {
             player.transform.position = startPosition.position;
             player.transform.rotation = startPosition.rotation;
-            rb.constraints = RigidbodyConstraints.None;
-            rb.constraints = RigidbodyConstraints.FreezeRotationX;
-            rb.constraints = RigidbodyConstraints.FreezeRotationZ;
+            //rb.constraints = RigidbodyConstraints.None;
+            //rb.constraints = RigidbodyConstraints.FreezeRotationX;
+            //rb.constraints = RigidbodyConstraints.FreezeRotationZ;
         }
     }
 }
