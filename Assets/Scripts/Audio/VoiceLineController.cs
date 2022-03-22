@@ -1,6 +1,5 @@
+using TMPro;
 using UnityEngine;
-
-[RequireComponent(typeof(AudioSource))]
 
 public class VoiceLineController : MonoBehaviour
 {
@@ -8,9 +7,9 @@ public class VoiceLineController : MonoBehaviour
 
     private static int _voiceLineIndex;
 
-    public void PlayNextVoiceLine(AudioSource audioSource)
+    public void PlayNextVoiceLine(AudioSource audioSource, TMP_Text subtitles)
     {
-        voiceLines[_voiceLineIndex].PlayLine(audioSource);
+        voiceLines[_voiceLineIndex].PlayLine(audioSource, subtitles);
         _voiceLineIndex++;
     }
 }
