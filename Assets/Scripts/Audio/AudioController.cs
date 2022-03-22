@@ -10,13 +10,17 @@ namespace Audio
 
         private float audioTimer;
 
-        public void PlayWalkAudio(float moveSpeed, AudioSource audioSource, Transform playerPosition)
+        public void PlayWalkAudio(Vector3 moveSpeed, AudioSource audioSource, Transform playerPosition)
         {
-            if (moveSpeed <= 0f) return;
+            if (moveSpeed != Vector3.zero) return;
             if (Time.time < audioTimer) return;
 
             RaycastHit raycast;
             Physics.Raycast(playerPosition.position, Vector3.down, out raycast);
+
+            Debug.DrawRay(playerPosition.position, Vector3.down, Color.red);
+            print(raycast.distance);
+            print(raycast.collider.tag);
 
             if (raycast.collider.CompareTag("Ground"))
             {

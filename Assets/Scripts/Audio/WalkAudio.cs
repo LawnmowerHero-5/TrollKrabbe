@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Audio
 {
-    [CreateAssetMenu(fileName = "Rødhette/WalkAudio", menuName = "WalkAudio", order = 1)]
+    [CreateAssetMenu(fileName = "WalkAudio", menuName = "Rødhette/WalkAudio", order = 1)]
     public class WalkAudio : ScriptableObject
     {
         [SerializeField] private AudioClip[] footSteps;

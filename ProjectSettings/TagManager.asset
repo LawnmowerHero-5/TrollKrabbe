@@ -6,6 +6,9 @@ TagManager:
   tags:
   - StoryPoint
   - HalfwayPoint
+  - Water
+  - Ground
+  - Rock
   layers:
   - Default
   - TransparentFX
