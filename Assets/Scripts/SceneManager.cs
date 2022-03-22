@@ -8,7 +8,6 @@ public class SceneManager : MonoBehaviour
 {
     public GameObject pauseCanvas;
     public GameObject player;
-    public Button playButton;
     private InputActions inputAction;
     private bool gamePause;
     public bool gameIsPaused;
