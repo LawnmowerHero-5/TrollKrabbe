@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 7064526172536901664}
   - component: {fileID: 7064526172536901663}
   - component: {fileID: 8357140609366076103}
+  - component: {fileID: 4367725176694883443}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -359,7 +360,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -443,3 +444,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4367725176694883443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7064526172536901667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 825b0c1ba2bb41edb3bd57d88b430998, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundWalk: {fileID: 11400000, guid: 225f7fbbc47c0ce4bbe57f88c32abc23, type: 2}
+  waterWalk: {fileID: 11400000, guid: cbb9ab2cb2e7c9141bf66591fddde47c, type: 2}
+  rockWalk: {fileID: 11400000, guid: 2ed736774f001c54e913a2f3d39aa711, type: 2}
+  audioFrequency: 0.5
