@@ -22,8 +22,6 @@ namespace Audio
             Physics.Raycast(playerPosition.position, Vector3.down, out raycast);
 
             Debug.DrawRay(playerPosition.position, Vector3.down, Color.red);
-            print(raycast.distance);
-            print(raycast.collider.tag);
 
             if (raycast.collider.CompareTag("Ground"))
             {

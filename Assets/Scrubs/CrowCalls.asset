@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e305bf9135ab21e4186fa0cc4d687859, type: 3}
+  m_Name: CrowCalls
+  m_EditorClassIdentifier: 
+  footSteps:
+  - {fileID: 8300000, guid: 250449dd423fd0b4d87a2bd6af81a3e0, type: 3}
+  - {fileID: 8300000, guid: 0c383142e9a7c3544be0ef88ec0fb484, type: 3}
+  - {fileID: 8300000, guid: 9458f529655ce8c45ac14fb31d276189, type: 3}
+  - {fileID: 8300000, guid: a7b0e6555b3b85447b5f963d0800444a, type: 3}
+  - {fileID: 8300000, guid: 5aa3e1ea4e0c0aa43a49102b9fc49373, type: 3}
