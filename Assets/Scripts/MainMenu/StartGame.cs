@@ -5,8 +5,6 @@ namespace MainMenu
     {
         public Transform startPosition;
         public GameObject player;
-        
-        //private Rigidbody rb;
 
         private SceneManager sceneManager;
         
@@ -14,8 +12,6 @@ namespace MainMenu
         private void Awake()
         {
             player = GameObject.FindGameObjectWithTag("Player");
-            //rb = player.GetComponent<Rigidbody>();
-           
         }
         public void StartTheGame()
         {
@@ -30,9 +26,6 @@ namespace MainMenu
         {
             player.transform.position = startPosition.position;
             player.transform.rotation = startPosition.rotation;
-            //rb.constraints = RigidbodyConstraints.None;
-            //rb.constraints = RigidbodyConstraints.FreezeRotationX;
-            //rb.constraints = RigidbodyConstraints.FreezeRotationZ;
         }
     }
 }

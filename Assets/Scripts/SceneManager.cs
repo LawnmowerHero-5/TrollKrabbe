@@ -1,14 +1,11 @@
-using System;
 using MainMenu;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SceneManager : MonoBehaviour
 {
     public GameObject pauseCanvas;
     public GameObject player;
-    public Button playButton;
     private InputActions inputAction;
     private bool gamePause;
     public bool gameIsPaused;
@@ -16,6 +13,7 @@ public class SceneManager : MonoBehaviour
     public GameObject mainMenu;
     public GameObject menuCamera;
     private StartGame startGame;
+    private Reset reset;
 
     private void Awake()
     {
@@ -30,10 +28,10 @@ public class SceneManager : MonoBehaviour
     
     private void Update()
     {
-        
-
         gamePause = inputAction.Player.Pause.triggered;
+        
         if (startMenu == true) return;
+        
         if (gamePause)
         {
             if (gameIsPaused)
@@ -112,5 +110,12 @@ public class SceneManager : MonoBehaviour
         menuCamera.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;             
         Cursor.visible = false;
+    }
+
+    public void ResetGame()
+    {
+        Resume();
+        AudioListener.pause = true;
+        MainMenu();
     }
 }
